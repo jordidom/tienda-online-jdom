@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online</title>
+    <link rel="stylesheet" href="status/css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>🛍️ Mi Tienda Online</h1>
+    </header>
+
+    <!-- Contenedor de productos -->
+    <section id="productos"></section>
+
+    <!-- Carrito -->
+    <section id="carrito-container">
+        <h2>🛒 Carrito de Compras</h2>
+        <ul id="lista-carrito"></ul>
+
+        <!-- Formulario de datos del cliente -->
+        <form id="datosCliente">
+            <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required>
+            <input type="text" id="direccion" name="direccion" placeholder="Tu Dirección" required>
+        </form>
+
+        <button id="btn-comprar" onclick="enviarPedido()">Confirmar Compra</button>
+    </section>
+
+    <!-- Formulario oculto para Formspree -->
+    <form id="formularioPedido" action="https://formspree.io/f/xwpvqrwz" method="POST" style="display: none;">
+        <input type="hidden" name="pedido" id="pedidoInput">
+        <input type="hidden" name="nombre" id="nombreInput">
+        <input type="hidden" name="direccion" id="direccionInput">
+    </form>
+
+    <script src="status/js/script.js"></script>
+</body>
+</html>
